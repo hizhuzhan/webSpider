@@ -6,7 +6,7 @@ import java.net.URLConnection;
 /*
  * Java模拟Get访问百度的Main方法
  */
-public class Spidertest {
+public class SpiderTest {
 	public static void main(String[] args){
 		//定义访问的链接
 		String url = "http://www.baidu.com";
