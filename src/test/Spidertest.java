@@ -1,8 +1,8 @@
 package test;
 
 import java.io.*;
-import java.net.URL;
-import java.net.URLConnection;
+import java.net.*;
+
 /*
  * Java模拟Get访问百度的Main方法
  */
