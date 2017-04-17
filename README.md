@@ -4,8 +4,8 @@
 ----
 SpiderTest</br>
 简单的爬下一个网页(www.baidu.com)</br>
-目录：src/test/Spidertest.java</br>
+目录：src/test/SpiderTest.java</br>
 
 SpiderTest2</br>
 爬下Baidu首页的Logo</br>
-目录：src/test/Spidertest.java</br>
+目录：src/test/SpiderTest2.java</br>
