@@ -13,9 +13,9 @@ SpiderTest2</br>
 2017.4.25更新：
 ----
 jdmobilephone:
-爬取网址(https://list.jd.com/list.html?cat=9987,653,655&page=1&sort=sort_rank_asc&trans=1&JL=6_0_0&ms=5#J_main)
-将此所有页的手机的介绍和网址保存到SQL Server
-包括3个类
+爬取网址(https://list.jd.com/list.html?cat=9987,653,655&page=1&sort=sort_rank_asc&trans=1&JL=6_0_0&ms=5#J_main)</br>
+将此所有页的手机的介绍和网址保存到SQL Server</br>
+共包括3个类</br>
 
 jdmobilephone.GetFromUrl提供4个方法</br>
 Class1：GetFromUrl</br>
