@@ -1,9 +1,9 @@
-package test;
+package come.example;
 
 import java.io.*;
 import java.net.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.regex.*;
+
 
 public class SpiderTest2 {
 	static String sendGet(String url){
@@ -19,7 +19,7 @@ public class SpiderTest2 {
 			//开始实际的连接
 			connection.connect();
 			//初始化BufferedReader输入流来读取URL的响应
-			in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+			in = new BufferedReader(new InputStreamReader(connection.getInputStream(),"UTF-8"));
 			//用来临时存储抓到的每一行数据
 			String line;
 			while((line = in.readLine()) != null){
@@ -58,13 +58,13 @@ public class SpiderTest2 {
 	
 	public static void main(String[] args){
 		//定义即将要访问的链接
-		String url = "http://www.baidu.com";
+		String url = "https://list.jd.com/list.html?cat=9987,653,655&page=1&sort=sort_rank_asc&trans=1&JL=6_0_0&ms=6#J_main";
 		//访问连接并获取页面
 		String result = sendGet(url);
 		System.out.println("网页内容："+result);
 		//使用正则表达式匹配图片的src内容
-		String imgSrc = RegexString(result, "src=//(.+)\\swidth=");
-		//打印结果
-		System.out.println("百度Logo："+imgSrc);
+//		String imgSrc = RegexString(result, "src=//(.+)\\swidth=");
+//		//打印结果
+//		System.out.println("百度Logo："+imgSrc);
 	}
 }

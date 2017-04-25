@@ -1,8 +1,7 @@
-package test;
+package come.example;
 
 import java.io.*;
 import java.net.*;
-
 /*
  * Java模拟Get访问百度的Main方法
  */
