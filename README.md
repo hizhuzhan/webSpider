@@ -44,3 +44,9 @@ NoReturn</br>
 
 jdmobilephone.main；调用上列方法对数据进行解析</br>
 
+----
+2017.4.25更新：
+----
+jdmobilephone.main：更新自动爬取页数
+
+----
