@@ -62,7 +62,7 @@ public class GetFromUrl {
 		Pattern pattern = Pattern.compile(patternStr);
 		Matcher matcher = pattern.matcher(targetStr);
 		if(matcher.find()){
-			System.out.println(matcher.group(1));
+			System.out.println("获取到：" + matcher.group(1));
 			return matcher.group(1);
 		}else{
 			return "未匹配";
