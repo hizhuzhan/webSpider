@@ -54,6 +54,16 @@ jdmobilephone.Main：更新自动爬取页数
 ----
 jdmobilephone.Method：获取手机的其他信息
 更新字段：
-品牌：\t型号：
+价格：Price
+品牌：Brand
+型号：Version
+上市年份：PublishYear
+上市月份：PublishMonth
+操作系统：System
+频幕尺寸：ScreenSize
+电池容量：BatteryCapacity
+手机ID：WebId
+价格在手机端网址上抓取(http://item.m.jd.com/product/phoneId.html)
+phoneId为WebId
 
 ----
