@@ -42,11 +42,18 @@ Class1：changeInformation</br>
 Parameter：SQL语句(sql)</br>
 NoReturn</br>
 
-jdmobilephone.main；调用上列方法对数据进行解析</br>
+jdmobilephone.Main；调用上列方法对数据进行解析</br>
 
 ----
-2017.4.25更新：
+2017.4.27更新：
 ----
-jdmobilephone.main：更新自动爬取页数
+jdmobilephone.Main：更新自动爬取页数
+
+----
+2017.4.28更新：
+----
+jdmobilephone.Method：获取手机的其他信息
+更新字段：
+品牌：\t型号：
 
 ----
