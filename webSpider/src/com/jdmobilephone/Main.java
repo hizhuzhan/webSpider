@@ -1,8 +1,6 @@
 package com.jdmobilephone;
 
-import java.sql.Savepoint;
 import java.util.List;
-import java.util.Set;
 
 public class Main {
 
@@ -13,10 +11,12 @@ public class Main {
 		// TODO Auto-generated method stub
 		GetFromUrl get = new GetFromUrl();
 		SaveUseJDBC save = new SaveUseJDBC();
+		Method phoneInfo = new Method();
+		String encoding = "UTF-8";
 		//返回页数
 		String urlPage = "https://list.jd.com/list.html?cat=9987,653,655";
 		String regexPage = "<em>共<b>(.+?)</b>页";
-		String resultPage = get.sendGet(urlPage);
+		String resultPage = get.sendGet(urlPage,encoding);
 		String pageStr = get.RegexString(resultPage, regexPage);
 		int page = Integer.parseInt(pageStr);
 		
@@ -30,7 +30,7 @@ public class Main {
 		for(int i = 1; i <= page; i++){
 			count++;
 			String url = "https://list.jd.com/list.html?cat=9987,653,655&page=" + i + "&sort=sort_rank_asc&trans=1&JL=6_0_0&ms=5#J_main";
-			String result = get.sendGet(url);
+			String result = get.sendGet(url,encoding);
 			List putAll = get.RegexStringsRepeat(result, regexAll);
 			for(int x = 0; x < putAll.size(); x++){
 				String resultAll = (String) putAll.get(x);
@@ -46,6 +46,9 @@ public class Main {
 					idUrl++;
 					String saveSql = "UPDATE JDMobilePhones.dbo.MobilePhones SET Url = '" + putUrl.get(z) + "' where Id = " + idUrl;
 					save.changeInformation(saveSql);
+					//根据网址获取手机信息
+					phoneInfo.savePhoneInfo(putUrl.get(z).toString());
+					System.out.println(putUrl.get(z).toString()+"-----------------------------------------------------------------------------------------------------------------");
 				}
 
 			}

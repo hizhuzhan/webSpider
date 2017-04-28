@@ -17,7 +17,7 @@ public class GetFromUrl {
 	/*
 	 * 以GET方式获取网页代码
 	 */
-	public String sendGet(String url){
+	public String sendGet(String url,String encoding){
 		String result = "";
 		BufferedReader in = null;
 		try {
@@ -25,7 +25,7 @@ public class GetFromUrl {
 			URL realUrl = new URL(url);
 			URLConnection conn = realUrl.openConnection();
 			conn.connect();
-			in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+			in = new BufferedReader(new InputStreamReader(conn.getInputStream(),encoding));
 			String line;
 			while((line = in.readLine()) != null){
 				result += line;
